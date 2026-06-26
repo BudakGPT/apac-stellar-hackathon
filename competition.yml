@@ -1,0 +1,54 @@
+# =============================================================================
+#  APAC Stellar Hackathon tracker. Edit this file; the README dashboard
+#  regenerates itself. Never hand-edit the AUTO block in README.md.
+# =============================================================================
+
+name: "APAC Stellar Hackathon"
+organizer: "Stellar x Rise In"
+tagline: "Building real-world financial applications on Stellar for the APAC region."
+
+# Registered and planning. Track and project not locked yet.
+status: active
+
+theme:
+  accent: "FDDA24"        # Stellar gold
+  banner: ""
+
+links:
+  registration: "https://www.risein.com/programs/apac-stellar-hackathon"
+  website: ""
+  devpost: ""
+  code: ""                # the project repo, once created (private during, public after)
+  slides: ""
+  demo: ""
+
+# Official key dates. Launch and mentoring are already past (done).
+timeline:
+  - milestone: "Official Launch"
+    date: 2026-05-14
+    done: true
+  - milestone: "Mentoring Opens"
+    date: 2026-06-15
+    done: true
+  - milestone: "Submission Deadline"
+    date: 2026-07-15
+    done: false
+  - milestone: "Demo Day"
+    date: 2026-07-18
+    done: false
+  - milestone: "Grand Finale"
+    date: 2026-07-24
+    done: false
+
+# The five required submission deliverables.
+deliverables:
+  - name: "Project description"
+    done: false
+  - name: "Public GitHub repository"
+    done: false
+  - name: "Project README"
+    done: false
+  - name: "Demo video"
+    done: false
+  - name: "Pitch deck"
+    done: false
