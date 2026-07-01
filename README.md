@@ -49,16 +49,31 @@ open to builders across APAC, with supporting events in Vietnam, Indonesia, and
 the Philippines. The brief is narrow on purpose: build **real-world financial
 applications** with genuine utility, not throwaway prototypes.
 
-Our team is **registered and scoping a project**. This repository is our context
-hub and planning workspace. It holds the rules, the rubric we are building
-toward, our track and project decisions, and links to everything we produce.
+Our team is **registered, and both track and project are locked.** This repository
+is our context hub and planning workspace: it holds the rules, the rubric we build
+toward, our decisions, and links to everything we produce.
 
-> **Open decisions:** track is not chosen, and the project concept is not locked.
-> See [Choosing our track](#choosing-our-track) and [Project](#project).
+> **Project (locked):** **Patungan** — collective remittance + quadratic-funding matching
+> on Stellar, filed under **Payment & Consumer Applications**. Tagline: *"gotong royong,
+> on-chain."* Full spec in [`docs/prd.md`](docs/prd.md).
 
-## Choosing our track
+### Planning docs
+
+| Doc | What it is |
+| :--- | :--- |
+| [`docs/prd.md`](docs/prd.md) | **The locked spec** — problem, mechanism, scope, timeline, risks, decisions |
+| [`docs/pitch-deck-outline.md`](docs/pitch-deck-outline.md) | Slide-by-slide pitch outline (Indonesian round-one panel) |
+| [`docs/quadratic-funding.md`](docs/quadratic-funding.md) | The QF mechanism deep-dive (the *why* behind the math) |
+| [`docs/decision-handoff.md`](docs/decision-handoff.md) | Decision trail — what was explored and ruled out |
+| [`docs/research/stellar-winner-patterns.md`](docs/research/stellar-winner-patterns.md) | Research: what past Stellar-hackathon winners had in common |
+| [`prototype-arisan/`](prototype-arisan/) | Working Soroban escrow contract (2 passing tests) — reused for the QF engine |
+
+## Our track
 
 One team competes in exactly one track. Each track carries a **$20,000** prize.
+**We are entering Payment & Consumer Applications** (locked) — remittances are a named
+example of the track, giving Patungan a safe track-fit floor while the quadratic match
+carries the innovation score. See [`docs/prd.md`](docs/prd.md) §4 for the reasoning.
 
 | Track | Prize | What it rewards | Example builds |
 | :--- | :--- | :--- | :--- |
@@ -66,8 +81,7 @@ One team competes in exactly one track. Each track carries a **$20,000** prize.
 | **Local Finance & Real World Access** | $20,000 | Connecting real-world assets and local financial systems to Stellar | RWA tokenization, anchor integrations, local-asset on/off ramps, savings products |
 | **DeFi & Ecosystem Composability** | $20,000 | DeFi products and composable financial infrastructure | AMMs, lending, yield, DEX tooling, cross-chain and interoperability |
 
-> **Our track:** _to be decided._ Once chosen, set this section and confirm the
-> tracker status.
+> **Locked:** Payment & Consumer Applications.
 
 ## What the judges reward
 
@@ -145,14 +159,22 @@ Orientation for the build:
   follow-on grants of up to **$150,000 in XLM** to take a validated project to
   launch.
 
-## Project
+## Project — Patungan
 
-Locked once the track and concept are decided. Fill in:
+Full spec: [`docs/prd.md`](docs/prd.md). Summary:
 
-- **Problem** — the specific APAC financial problem and who has it.
-- **Approach** — the solution and why Stellar is the right rail.
-- **Architecture** — Soroban contracts, anchors, wallets, and frontend.
-- **Demo** — screenshots, a recording, and the live link.
+- **Problem** — Indonesian migrant-worker (PMI/TKI) remittances are atomized private
+  transfers; there is no trustworthy rail for the diaspora to *collectively* fund shared
+  village projects, and institutional community-fund allocation carries a real trust gap.
+- **Approach** — A sponsor (province / BP2MI / BRI, Dana Desa-style 3:1 match) seeds a
+  matching pool; the diaspora chips in small amounts to village projects; a Soroban contract
+  records every contribution on-chain and splits the pool by **breadth of support** via
+  quadratic funding `(Σ√contribution)²`. Stellar's near-zero fees make on-chain
+  micro-contributions viable — exactly what QF needs.
+- **Architecture** — Soroban contract (Rust, the hero) + Freighter wallet + thin React
+  frontend + a test IDR-stablecoin token on testnet. Anchor/SEP-24 is a narrated stretch.
+- **Demo** — the reveal: one whale on Project A vs. 50 small donors on Project B → the match
+  visibly flows to the crowd. _(Screenshots / recording / live link: TBD once built.)_
 
 ## Notes and decisions
 
@@ -160,3 +182,10 @@ A running log of decisions, rules to remember, mentor feedback, and open
 questions.
 
 - _2026-06-26_ — Tracker created. Registered; track and project pending.
+- _2026-06-29_ — **Project + track locked:** Patungan (collective remittance + quadratic
+  matching) under Payment & Consumer. Decisions pressure-tested via advisory council; see
+  [`docs/prd.md`](docs/prd.md) §15.
+- _2026-07-01_ — Council review: planning judged **complete enough to start building**;
+  further planning is now procrastination. Repo reorganized (planning docs → `docs/`, stale
+  "track not chosen" language removed). Next gate: run the `prototype-arisan/` toolchain +
+  testnet round-trip to verify the "~60% reusable" foundation.

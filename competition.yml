@@ -7,7 +7,8 @@ name: "APAC Stellar Hackathon"
 organizer: "Stellar x Rise In"
 tagline: "Building real-world financial applications on Stellar for the APAC region."
 
-# Registered and planning. Track and project not locked yet.
+# Registered. Project locked: "Patungan" (collective remittance + quadratic matching),
+# Payment & Consumer track. Now in the build phase. See docs/prd.md.
 status: active
 
 theme:
