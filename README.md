@@ -3,7 +3,7 @@
 
 <p align="center"><img src="assets/header.svg" alt="APAC Stellar Hackathon" width="100%"></p>
 
-> Next milestone: **Submission Deadline**, 7 days remaining (2026-07-15).
+> Next milestone: **Submission Deadline**, 6 days remaining (2026-07-15).
 
 ## Timeline
 
@@ -37,7 +37,7 @@ gantt
 | :--- | :--- |
 | Registration | https://www.risein.com/programs/apac-stellar-hackathon |
 
-<div align="right"><sub>Last updated 2026-07-08</sub></div>
+<div align="right"><sub>Last updated 2026-07-09</sub></div>
 
 <!-- AUTO:END -->
 
