@@ -37,7 +37,7 @@ gantt
 | :--- | :--- |
 | Registration | https://www.risein.com/programs/apac-stellar-hackathon |
 
-<div align="right"><sub>Last updated 2026-09-02</sub></div>
+<div align="right"><sub>Last updated 2026-09-03</sub></div>
 
 <!-- AUTO:END -->
 
